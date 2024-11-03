@@ -1,0 +1,169 @@
+@font-face {
+    font-family: "TT Lakes";
+    src: url("./fonts/TTLakes-Bold.woff");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "TT Lakes";
+    src: url("./fonts/TTLakes-Medium.woff");
+    font-weight: medium;
+}
+@font-face {
+    font-family: "TT Lakes";
+    src: url("./fonts/TTLakes-Regular.woff");
+    font-weight: normal;
+}
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    font-family: "TT Lakes";
+}
+
+ul, li, p, a, h1, h2, h3, h4, h5 {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.mobile-menu {
+    padding: 24px;
+    width: 320px;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2), -2px 0 4px 0 rgba(69, 79, 126, 0.02);
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.buttons {
+    display: flex;
+    align-items: center;
+    column-gap: 17px;
+}
+.buttons__item {
+    background: #ff3e79;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: background .3s ease;
+    cursor: pointer;
+}
+.buttons__item:hover {
+    background: #ff78a0;
+}
+.main {
+    margin-top: 50px;
+}
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+.list__item a{
+    font-weight: 500;
+    font-size: 16px;
+    color: #1b1c21;
+    transition: color .3s ease;
+}
+.list__item::before {
+    display: block;
+    content: "";
+    width: 4px;
+    height: 32px;
+    background:  #41F6D7;
+    position: absolute;
+    border-radius: 2px 2px 0 0;
+    left: 0;
+    margin-top: -7px;
+    opacity: 0;
+    transition: opacity .3s ;
+
+}
+
+.list__item a:hover {
+    color: #7e7e82;
+}
+.list__item:hover::before {
+    opacity: 1;
+} 
+
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+.footer__email {
+    margin-top: 16px;
+}
+.footer__email a {
+    font-weight: 500;
+    font-size: 16px;
+    color: #1b1c21;
+    transition: color .3s;
+}
+.footer__email a:hover {
+    color: #33343a;
+}
+.footer__number {
+    margin-top: 12px;
+}
+.footer__number a{
+    font-weight: 700;
+    font-size: 24px;
+    color: #1b1c21;
+    transition: color .3s;
+}
+.footer__number a:hover {
+    color: #60636b;
+}
+.footer__languages {
+    margin-top: 40px;
+    margin-bottom: 32px;
+    display: flex;
+    gap: 7px;
+}
+.footer__lang {
+    background: none;
+    border: none;
+    color: #1b1c21;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color .3s ;
+    cursor: pointer;
+}
+.footer__lang:hover {
+    color: #7e7e82;
+}
+@media screen and (max-height: 750px) {
+    .list {
+        gap: 16px;
+    }
+}
+@media screen and (max-height: 690px) {
+    .list {
+        gap: 12px;
+    }
+    .footer__languages {
+        margin-top: 20px;
+    }
+    .main {
+        margin-top: 20px;
+    }
+}
